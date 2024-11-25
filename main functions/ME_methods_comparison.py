@@ -25,8 +25,8 @@ def solve_master_equation(omega_m:float, omega_c:float, gamma:list, kappa:list, 
         Initial state of the molecules in the computational basis.
     type : str
         'original' for the original master equation with the cavity,
-        'markovian' for the Markovian ME, 'diagonal' for the ME in the coupled
-        basis with just the diagonal dissipators.
+        'markovian' for the Markovian ME, 
+        'diagonal' for the ME in the coupled basis with just the diagonal dissipators.
 
     Returns
     -------
@@ -38,9 +38,9 @@ def solve_master_equation(omega_m:float, omega_c:float, gamma:list, kappa:list, 
 
     Description
     -----------
-        This function solves the master equation of a two TLSs, each with frequency `omega_m[i]`, 
-        and decaying at a rate `gamma[i]`, while coupled each to a cavity through a coupling 
-        strengths `g[i]`.
+        This function solves the master equation for two TLSs, each with frequency `omega_m[i]`, 
+        and decaying at a rate `gamma[i]`, while coupled to a cavity through a coupling 
+        constant `g[i]`.
 
 
     """
@@ -124,8 +124,8 @@ def get_hamiltonian(n, omega_m, omega_c, kappa, g, type):
         Coupling strengths.
     type : str
         'original' for the original master equation with the cavity,
-        'markovian' for the Markovian ME, 'diagonal' for the ME in the coupled
-        basis with just the diagonal dissipators.
+        'markovian' for the Markovian ME, 
+        'diagonal' for the ME in the coupled basis with just the diagonal dissipators.
 
     Returns
     -------
@@ -248,7 +248,8 @@ def get_observables(type):  ## NOT DEFINED FOR THE N QUBIT CASE
     ----------
     type : str
         'original' for the original master equation with the cavity,
-        'markovian' for the Markovian ME.
+        'markovian' for the Markovian ME,
+        'diagonal' for the ME in the coupled basis with just the diagonal dissipators.
 
     Returns
     -------
@@ -333,7 +334,8 @@ def get_lindblads(n, omega_m, omega_c, gamma, kappa, g, type):
         Coupling strengths.
     type : str
         'original' for the original master equation with the cavity,
-        'markovian' for the Markovian ME.   
+        'markovian' for the Markovian ME,
+        'diagonal' for the ME in the coupled basis with just the diagonal dissipators.  
 
     Returns
     -------
